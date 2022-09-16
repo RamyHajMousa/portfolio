@@ -1,0 +1,322 @@
+body {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #0e141b;
+    color: azure;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+.header,
+.footer {
+    flex: 1 100%;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+
+a:hover {
+    color: #f80a75;
+}
+
+h1 {
+    color: #3c5dfe;
+}
+
+h2 {
+    color: #f80a75;
+    margin-bottom: 50px;
+}
+
+h3 {
+    color: #617bff;
+}
+
+p:hover i {
+    color: azure;
+}
+
+p:hover a {
+    color: #f80a75;
+}
+
+span {
+    color: #3c5dfe;
+}
+
+/*====================HEADER====================*/
+
+.header nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.ramysLogo img {
+    width: 100px;
+    height: 100px;
+}
+
+.headerButtons {
+    margin-left: auto;
+    padding: inherit;
+}
+
+.headerButtons>ul {
+    align-items: center;
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.headerButtons li p {
+    padding: 10px;
+    width: 90px;
+    border-radius: 20px;
+    background-color: #3c5dfe;
+    font: larger;
+}
+
+.headerButtons li p:hover {
+    background-color: #f80a75;
+    color: #0e141b;
+}
+
+/*====================MAIN====================*/
+.content {
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+    gap: 10px;
+}
+
+.main {
+    text-align: left;
+}
+
+/*----------ABOUT ME----------*/
+.aboutMeContainer {
+    display: flex;
+}
+
+.aboutMeText {
+    padding: 5px;
+}
+
+.aboutMeImage {
+    text-align: center;
+}
+
+.aboutMeImage img {
+    width: 300px;
+    height: auto;
+    border-radius: 35px;
+}
+
+/*---------------SKILLS---------------*/
+.skillsList ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.skillsList li {
+    min-width: 170px;
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.skillsList img {
+    margin: 15px;
+    width: 50px;
+    height: auto;
+}
+
+/*---------------PROJECTS---------------*/
+.projectsCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    padding: 15px 20px 0 20px;
+    background-color: #172331;
+    border-radius: 20px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+}
+
+i {
+    margin: 10px;
+}
+
+.cardHeader>i {
+    color: #f80a75;
+}
+
+.cardHeader :nth-child(2) {
+    margin-left: auto;
+}
+
+.cardHeader :nth-child(1) {
+    font-size: 50px;
+}
+
+.cardFooter {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.cardFooter p {
+    color: rgb(85, 80, 80);
+}
+
+
+/*----------------ASIDE----------------*/
+.asideContent {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 150%;
+    align-items: center;
+    position: sticky;
+    top: 100px;
+    min-width: 130px;
+}
+
+.asideContent h3 {
+    color: #f80a75;
+    margin: 0;
+}
+
+.asideContent p {
+    margin: 0px;
+}
+
+.asideContent div {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.asideContent i {
+    font-size: 20px;
+    color: #617bff;
+}
+
+
+/*====================FOOTER====================*/
+.footer {
+    padding: 20px;
+    background: #172331;
+}
+
+.copyRight {
+    color: rgb(85, 80, 80);
+}
+
+.footer p {
+    width: fit-content;
+    margin: 10px auto;
+}
+/*--------------------------------------------------------------------*/
+
+/*Screen Width < 1024*/
+@media (max-width: 1024px) {
+    .projectCard {
+        flex-basis: 100%;
+    }
+
+    .aboutMeContainer {
+        flex-wrap: wrap;
+    }
+
+    .aboutMeImage {
+        width: 300px;
+        margin: auto;
+    }
+    .asideContent{
+        margin: 0;
+    }
+}
+
+/*Screen Width < 860*/
+@media (max-width: 860px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .aside {
+        order: 1;
+    }
+
+    .main {
+        order: 2;
+    }
+}
+
+/*Screen Width < 530*/
+@media (max-width: 530px) {
+    .header nav {
+        flex-direction: column;
+    }
+
+    .headerButtons {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*____________________CV PAGE____________________*/
+.cvContent {
+    width: 75%;
+    margin: 50px auto;
+    text-align: left;
+}
+
+.cvContent i {
+    color: azure;
+    font-size: 35px;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: baseline;
+}
+
+.year-city {
+    display: flex;
+    border-bottom: 2px solid #f80a75;
+    align-items: center;
+}
+
+.year-city>div {
+    flex-basis: 100%;
+}
+
+.cvSections ul {
+    color: azure;
+}
+
+.sc-content {
+    border-bottom: 2px solid #f80a75;
+}
